@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="heading">Mini Instagram Page</h1>
+    <% for(user of userData){%>
+        <div class="userData">
+            <img class="userImg" src=<%=user.userImg %> alt="Image_Error">
+            <h4 class="username">@<%= user.username%>
+            </h4>
+            <h5 class="tagline">
+                <%=user.tagline %>
+            </h5>
+            <p>
+            <div class="comment">
+                <span class="comment_icon">💬</span>
+                <pre><%= user.comment %></pre> <br>
+                <div class="comment_icons">
+                    <a href="http://localhost:9090/userData/<%=user.id%>/comment">👁️‍🗨️</a>
+                    <a href="http://localhost:9090/userData/<%=user.id%>/comment/editcomm"> 📝</a> <br> <br>
+
+                    <form method="post" action="/userData/<%=user.id%>/comment?_method=DELETE">
+                        <button class="comment_btn">❌</button>
+                    </form>
+                </div>
+            </div>
+            </p>
+            <div class="btns">
+                <button class="post_view_btn"><a href="http://localhost:9090/userData/<%=user.id%>">view</a></button>
+                <button class="post_edit_btn"><a
+                        href="http://localhost:9090/userData/<%=user.id%>/edit">Edit</a></button> <br> <br>
+                <form method="post" action="/userData/<%=user.id%>?_method=DELETE">
+                    <button class="post_delete_btn">Delete</button>
+                </form>
+            </div>
+            <a href="http://localhost:9090/userData/new">  <button class="add_popst_btn">Add New Post</button></a>
+        </div>
+    <%} %>
+</body>
+
+</html>

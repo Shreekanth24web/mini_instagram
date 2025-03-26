@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view User Data</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="viewText">
+        <h1>view user Data</h1>
+        <h2>user ID: <%=user.id%>
+        </h2>
+        <h2>@<%=user.username%>
+        </h2>
+    </div>
+    <img class="userImg" src=<%=user.userImg%> alt="Image_Error">
+    <h5 class="viewtagline">
+        <%=user.tagline%>
+    </h5>
+    <p>💬<%=user.comment%>
+    </p>
+    <button class="backbtn"><a href="http://localhost:9090/userData">Back</a></button>
+</body>
+
+</html>

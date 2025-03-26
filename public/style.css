@@ -1,0 +1,246 @@
+body{
+  background-image: url(./uploads/bg02.avif);
+  background-size: contain; 
+  height: 100vh; 
+   
+}
+.heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: teal;
+  border: 2px solid none;
+  border-radius: 8px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 10px 2px;
+  text-shadow: 1px 3px 2px  bisque  ;
+}
+
+.userData {
+  background-image: url(./uploads/bg02.avif);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  border: 2px solid none;
+  width: 250px;
+  height: 90hv;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px; 
+  background-color: #e8e1d7;
+  /* box-shadow: 1px -1px 40px 1px; */
+  box-shadow: 1px -1px 4px 1px;
+}
+
+.userImg {
+  border-radius: 5px;
+  height: 330px;
+  width: 250px;
+
+}
+
+.username {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2px;
+  color:rgb(0, 55, 55);
+}
+
+.tagline {
+  margin-top: -15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comment {
+  margin-top: -45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.comment_icon {
+  background-color: black;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 15px;
+}
+
+
+
+
+.comment_icons {
+  margin-top: -10px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  /* background-color: goldenrod; */
+  font-size: 20px;
+}
+.comment_icons a{
+  text-decoration: dashed;
+}
+
+.comment_btn {
+  border: none;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  height: 22px;
+  margin-top: -15px;
+}
+
+.btns a {
+  text-decoration: none;
+}
+
+
+.post_view_btn,
+.post_edit_btn {
+  border: none;
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.post_view_btn a,
+.post_edit_btn a,
+.post_delete_btn {
+  color: white;
+  font-weight: 700;
+
+}
+
+.post_edit_btn a,.backbtn a,.viewbtn a{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+
+.post_edit_btn ,.backbtn {
+  background-color: #231e1e;
+}
+
+.post_delete_btn   {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(208, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: -5px;
+}
+
+.add_popst_btn {  
+  margin-top: 10px;
+  border: none;
+  height: 35px;
+  width: 200px;
+  background-color: #112652e1;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.add_popst_btn:hover {
+  background-color: #112652f0;
+}
+ 
+.backbtn{
+ border-radius: 5px;
+ height: 30px;
+ width: 50px;
+}
+.viewText{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.viewtagline{
+  font-family: sans-serif;
+}
+.edittext{
+  font-family: 'Courier New', Courier, monospace;
+}
+ span{
+  font-family:sans-serif;
+  font-size: 15px;
+}
+.editForm input, textarea{
+  border: none;
+  height: 20px;
+  padding: 2px 10px;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+.editForm textarea{
+  height: 50px;
+  
+}
+.editbtn,.addbtn,.editaddbtn,.viewbtn{
+  margin-bottom: 30px;
+  height: 30px;
+  width: 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: teal;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.addbtn:hover{
+  background-color: rgb(0, 66, 65);
+}
+.new_User_Data,.edit_add_comment,.view_comment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid rgb(0, 40, 40);
+  width: 370px;
+  height: 370px;
+  margin: auto;
+  margin-top: 30px; 
+  border-radius: 15px;
+  background: rgba(0, 128, 128, 0.063); 
+  box-shadow: 2px 2px 1px 1px teal;
+  
+}
+.new_User_Data .add_comment{
+  height: 50px;
+}
+.editForm .addFile{
+   background-color: white;
+}
+.new_User_Data h1,.edit_add_comment h1,.view_comment h1 {
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+.edit_add_comment textarea{
+  height: 60px;
+}
+.editaddbtn{
+  margin-top: 20px;
+}
+.backbtncolor{
+  background-color: black;
+}

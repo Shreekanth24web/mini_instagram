@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user data</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="edittext">Edit your post</h1>
+    <b><span>User Image:</span></b> <br>
+    <img class="userImg" src=<%=user.userImg %> alt="Img_Error">
+    <form  class="editForm" method="post" action="/userData/<%=user.id%>?_method=PUT" enctype="multipart/form-data">
+        <b><span>Edit Image:</span></b> <br>
+        <input class="addFile" type="file" name="userImg" accept="image/*"> <br><br>
+        <b> <span>Username:</span></b> <br>
+        <input type="text" placeholder="Enter your username" name="username" value="<%= user.username %>"> <br><br>
+        <b><span>Tagline:</span></b> <br>
+        <textarea rows="5" cols="30" name="tagline" placeholder="add tagline"><%=user.tagline%></textarea> <br> <br>
+        <b><span>Comment:</span> <br></b>
+        <textarea rows="5" cols="30" name="comment" placeholder="write your comment"><%=user.comment%></textarea> <br>
+        <br>
+        <button class="editbtn" type="submit">Update</button>
+        <button class="viewbtn backbtncolor"><a href="http://localhost:9090/userData">Back</button></a></button>
+        
+    </form>
+</body>
+
+</html>
