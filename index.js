@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 9090
+const PORT = process.env.PORT || 3000;
 const path = require('path')
 const multer = require('multer')
 const { v4: uuidv4 } = require('uuid')
@@ -9,11 +9,12 @@ const methodOverride = require('method-override')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
+app.use(methodOverride("_method"))
 
 app.set("view engine", 'ejs')
 app.set('views', path.join(__dirname, 'views'))
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(methodOverride("_method"))
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
 const storage = multer.diskStorage({
     destination: function (req, res, cb) {
@@ -43,6 +44,10 @@ let userData = [
     },
 
 ]
+
+app.get("/", (req, res) => {
+    res.redirect("/userData");
+});
 
 app.get('/userData', (req, res) => {
     res.render('index.ejs', { userData })
@@ -134,6 +139,6 @@ app.delete('/userData/:id/comment', (req, res) => {
 
 
 
-app.listen(port, () => {
-    console.log(`server running successfully at port ${port}`)
-})
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
