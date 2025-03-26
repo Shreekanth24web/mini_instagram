@@ -23,8 +23,8 @@
                 <span class="comment_icon">💬</span>
                 <pre><%= user.comment %></pre> <br>
                 <div class="comment_icons">
-                    <a href="http://localhost:9090/userData/<%=user.id%>/comment">👁️‍🗨️</a>
-                    <a href="http://localhost:9090/userData/<%=user.id%>/comment/editcomm"> 📝</a> <br> <br>
+                    <a href="http://localhost:3000/userData/<%=user.id%>/comment">👁️‍🗨️</a>
+                    <a href="http://localhost:3000/userData/<%=user.id%>/comment/editcomm"> 📝</a> <br> <br>
 
                     <form method="post" action="/userData/<%=user.id%>/comment?_method=DELETE">
                         <button class="comment_btn">❌</button>
@@ -33,14 +33,14 @@
             </div>
             </p>
             <div class="btns">
-                <button class="post_view_btn"><a href="http://localhost:9090/userData/<%=user.id%>">view</a></button>
+                <button class="post_view_btn"><a href="http://localhost:3000/userData/<%=user.id%>">view</a></button>
                 <button class="post_edit_btn"><a
-                        href="http://localhost:9090/userData/<%=user.id%>/edit">Edit</a></button> <br> <br>
+                        href="http://localhost:3000/userData/<%=user.id%>/edit">Edit</a></button> <br> <br>
                 <form method="post" action="/userData/<%=user.id%>?_method=DELETE">
                     <button class="post_delete_btn">Delete</button>
                 </form>
             </div>
-            <a href="http://localhost:9090/userData/new">  <button class="add_popst_btn">Add New Post</button></a>
+            <a href="http://localhost:3000/userData/new">  <button class="add_popst_btn">Add New Post</button></a>
         </div>
     <%} %>
 </body>
